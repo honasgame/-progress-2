@@ -1,12 +1,8 @@
-import random
-
-def generator():
+x = int(input("enter a number"))
+y = int(input("enter another number"))
+for num in range(x,y):
+    if num % 2 == 0:
+        print(num, "is an even number")
+    elif num % 2 != 0:
+        print(num,"is an odd number")
     
-    for i in range(6):
-        yield random.randint(1, 10)
-
-    
-    yield random.randint(1,5)
-
-for random_number in generator():
-       print( (random_number))
