@@ -1,11 +1,16 @@
-num = input("give some numbers") # input given by the user will be stored in num 
+def getSum(n): # Creating a function where n is the input given by the user
+ 
+    sum = 0 # Storing 0 in sum variable
 
-sum_digits = 0 # storing 0 in a variable
+    while (n != 0): # starting a while loop until n is not equal to 0
+ 
+        sum = sum + n % 10 # iterating over the value of sum by adding sum to the remainder of n and 10 and again storing it in sum
 
-for digit in str(num): # calling a loop to loop over num while making num a string
+        n = n//10 # dividing n and 10 and storing the answer (which will be a whole number by the use of // operator)  in n
+ 
+    return sum # returning the value of sum when n becomes 0
+ 
+ 
 
-    sum_digits += int(digit) # looping sum_of_digits adding to digits in num
-    # and storing the value in again in sum_of_digits 
-    # until the last digit while making each digit a integer from string
-                                
-print(sum_digits) # printing the value stored in sum_digits
+n = int(input("Enter any number:\n")) # letting the user give the input and converting it to integer
+print(getSum(n)) # printing the function
